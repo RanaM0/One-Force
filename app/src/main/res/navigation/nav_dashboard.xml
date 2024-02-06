@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/userFrag">
+
+    <fragment
+        android:id="@+id/userFrag"
+        android:name="com.itdocx.oneapp.Dashboard.User.UserFrag"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFrag_to_userWalletFrag"
+            app:destination="@id/userWalletFrag" />
+        <action
+            android:id="@+id/action_userFrag_to_userProfileFrag"
+            app:destination="@id/userProfileFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/userWalletFrag"
+        android:name="com.itdocx.oneapp.Dashboard.User.UserWalletFrag"
+        android:label="fragment_user_wallet"
+        tools:layout="@layout/fragment_user_wallet" />
+    <fragment
+        android:id="@+id/userProfileFrag"
+        android:name="com.itdocx.oneapp.Dashboard.User.UserProfileFrag"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

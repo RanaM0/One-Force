@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkBlue"
+    tools:context=".Fragments.SignUpFrag">
+    <ProgressBar
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:padding="@dimen/_20sdp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/darkBlue"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:elevation="@dimen/_5sdp"
+        android:id="@+id/signUpProgress"
+        />
+
+    <ImageView
+        android:id="@+id/ivSignUpsticker"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivArcSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/arc_3"
+        app:layout_constraintTop_toBottomOf="@id/ivSignUpsticker" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/lightBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivArcSignUp" />
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/ivArcSignUp"
+        android:layout_marginVertical="@dimen/_20sdp"/>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/txtLogin"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtLogin">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:hint="Full Name"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/darkBlue" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="user@gmail.com"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/darkBlue"
+            app:layout_constraintTop_toBottomOf="@id/etLoginUserName" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:hint="+923000000000"
+            android:maxLength="15"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/darkBlue" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCNIC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:hint="CNIC (e.g 12345-6789523-1)"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/darkBlue" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/darkBlue" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/etLoginUserName">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSignupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:background="@null"
+                android:hint="Password"
+                android:textColor="@color/darkBlue"
+                />
+
+            <ImageButton
+                android:id="@+id/btnsignupShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:src="@drawable/ic_show_password" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_et"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/etLoginUserName">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:hint="Confirm Password"
+                android:textColor="@color/darkBlue" />
+
+            <ImageButton
+                android:id="@+id/btnconfirmshowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:src="@drawable/ic_show_password" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/checkBoxSignUp"
+               />
+
+            <TextView
+                android:id="@+id/txtAuthSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="I agree to the Privacy Policy"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtDHA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/txtSignupinLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="Login"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:background="@drawable/bg_btn"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textColor="@color/lightBlue"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

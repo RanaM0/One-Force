@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "114939656954",
+    "firebase_url": "https://one-app-c6bf1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "one-app-c6bf1",
+    "storage_bucket": "one-app-c6bf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114939656954:android:26e147eedbbbc7a403e743",
+        "android_client_info": {
+          "package_name": "com.itdocx.oneapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgiTvurQj4N7CN2H3USvzM_mCSy-PO3bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

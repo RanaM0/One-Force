@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9">
+
+                <TextView
+                    android:id="@+id/txtWinnernamelist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="Name "
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInvestmentlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtWinnernamelist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="Investment"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtprizewonlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtInvestmentlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="Prize Won"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtprizeTypelist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtprizewonlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="Type"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtwinnerIdlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtprizeTypelist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text="Winner ID"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1">
+
+                <TextView
+                    android:id="@+id/txtWinnernameSpacerlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text=": "
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInvestmentSpacerlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtWinnernameSpacerlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text=": "
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtprizewonSpacerlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtInvestmentSpacerlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text=": "
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtprizeTypeSpacerlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtprizewonSpacerlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text=":"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtWinnerIdSpacerlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtprizeTypeSpacerlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:text=":"
+                    android:textColor="@color/darkBlue"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+
+                <TextView
+                    android:id="@+id/txtWinnernameinlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/darkBlue" />
+
+                <TextView
+                    android:id="@+id/txtInvestmentamountlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtWinnernameinlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="10 Rupees"
+                    android:textColor="@color/darkBlue" />
+
+                <TextView
+                    android:id="@+id/txtprizewonnamelist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtInvestmentamountlist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/darkBlue" />
+
+                <TextView
+                    android:id="@+id/txtrewardTypelist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtprizewonnamelist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/darkBlue" />
+
+                <TextView
+                    android:id="@+id/txtWinnerIDlist10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtrewardTypelist10"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:text="33101-5580060-3"
+                    android:textColor="@color/darkBlue" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivWinnerslist10"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_weight="0.8"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_2" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
