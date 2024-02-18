@@ -7,6 +7,7 @@
     android:background="@color/darkBlue"
     tools:context=".Fragments.SignUpFrag">
     <ProgressBar
+        android:id="@+id/signUpProgress"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,9 +18,7 @@
         android:indeterminateTint="@color/darkBlue"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_100sdp"
-        android:elevation="@dimen/_5sdp"
-        android:id="@+id/signUpProgress"
-        />
+        android:elevation="@dimen/_5sdp" />
 
     <ImageView
         android:id="@+id/ivSignUpsticker"
@@ -206,13 +205,11 @@
             android:orientation="horizontal">
 
            <CheckBox
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
                android:id="@+id/checkBoxSignUp"
-               />
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/txtAuthSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -231,7 +228,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txtDHA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Already have an account?"
@@ -239,7 +235,7 @@
                 android:textSize="@dimen/_12ssp" />
 
             <TextView
-                android:id="@+id/txtSignupinLogin"
+                android:id="@+id/txtlogininSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"

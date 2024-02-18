@@ -6,19 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/lightBlue"
     tools:context=".Dashboard.User.UserWalletFrag">
+
     <ProgressBar
         android:id="@+id/requestProg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/darkBlue"
         android:background="@drawable/bg_et"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="gone"
         android:elevation="@dimen/_10sdp"
-        />
+        android:indeterminateTint="@color/darkBlue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,7 +46,6 @@
                 android:src="@drawable/user_2" />
 
             <ImageView
-                android:id="@+id/waletNotifications"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_alignParentEnd="true"
@@ -69,7 +68,6 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/txtinvest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_30sdp"
@@ -84,7 +82,7 @@
     <ImageView
         android:id="@+id/ivWalletArc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_70sdp"
         android:scaleType="fitXY"
         android:src="@drawable/arc_2"
         app:layout_constraintTop_toBottomOf="@id/clheaderwallet" />
@@ -109,14 +107,13 @@
 
             <ImageView
                 android:id="@+id/ivUserWalletIcon"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_admin_wallet" />
 
             <TextView
-                android:id="@+id/txtcurrentBalanceTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/ivUserWalletIcon"
@@ -136,6 +133,7 @@
                 android:layout_alignBottom="@id/ivUserWalletIcon"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_toEndOf="@id/ivUserWalletIcon"
+                android:maxLines="1"
                 android:text="0.0"
                 android:textColor="@color/darkBlue"
                 android:textSize="@dimen/_24ssp"
@@ -154,266 +152,334 @@
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/cardWalletBalance"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardWalletBalance">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/llPredefinedLoad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginVertical="@dimen/_10sdp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/cardWalletBalance">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_5sdp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn10Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 10"
-                android:textColor="@color/lightBlue"
-                android:textSize="@dimen/_12ssp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn30Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 30"
-                android:textAllCaps="false"
-                android:textColor="@color/lightBlue"
-
-                android:textSize="@dimen/_12ssp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn50Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 50"
-                android:textColor="@color/lightBlue"
-                android:textSize="@dimen/_12ssp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_5sdp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn100Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 100"
-                android:textAllCaps="false"
-                android:textColor="@color/lightBlue"
-                android:textSize="@dimen/_12ssp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn500Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 500"
-                android:textAllCaps="false"
-                android:textColor="@color/lightBlue"
-                android:textSize="@dimen/_12ssp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn1000Load"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_btn"
-                android:padding="@dimen/_10sdp"
-                android:text="$ 1000"
-                android:textAllCaps="false"
-                android:textColor="@color/lightBlue"
-                android:textSize="@dimen/_12ssp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/rletCustomAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginVertical="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/llPredefinedLoad">
-
-        <ImageView
-            android:id="@+id/ivQrWallet"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_150sdp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/trust_wallet_qr" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OR"
-            android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/_14ssp"
-            android:textColor="@android:color/darker_gray"
-            android:textStyle="bold"
-            android:id="@+id/txtOR"/>
-        <TextView
-            android:background="@drawable/bg_et"
-            android:padding="@dimen/_10sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_margin="@dimen/_10sdp"
-            android:text="@string/Trcid"
-            android:textSize="@dimen/_14ssp"
-            android:textColor="@color/darkBlue"
-            android:id="@+id/txtTrcId"/>
-        <LinearLayout
-            android:id="@+id/llBtncopyShare"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/bg_oval_dark"
-                    android:src="@drawable/ic_copy_trc"
-                    android:id="@+id/btnCopyTrc"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    app:rippleColor="@color/lightBlue"
-                    android:clickable="true"
-                    />
-                <TextView
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDepositFunds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Deposit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnwithdawFunds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Withdraw"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWithdrawCredentials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/cardWalletBalance">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_et">
+
+                    <EditText
+                        android:id="@+id/etWithdrawName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Account Title"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/darkBlue"
+                        android:textColorHint="@android:color/darker_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_et">
+
+                    <TextView
+                        android:id="@+id/txtWithdrawEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@android:color/darker_gray"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/_14ssp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_et">
+
+                    <EditText
+                        android:id="@+id/etWithdrawAccNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="IBAN"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/darkBlue"
+                        android:textColorHint="@android:color/darker_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_et">
+
+                    <EditText
+                        android:id="@+id/etWithdrawBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Bank"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/darkBlue"
+                        android:textColorHint="@android:color/darker_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_et">
+
+                    <EditText
+                        android:id="@+id/etWithdrawamount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Enter withdraw amount($10-$100000)"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/darkBlue"
+                        android:textColorHint="@android:color/darker_gray" />
+                </RelativeLayout>
+
+
+                <CheckBox
+                    android:id="@+id/checkWithdraw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Copy"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/_12ssp"
-                    android:textColor="@color/darkBlue"
-                    />
+                    android:checked="false"
+                    android:text="I hereby that all information I have provided is correct."
+                    android:textColor="@color/darkBlue" />
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmitWithdraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_btn"
+                    android:text="Submit Withdraw Request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/bg_btn"
+                    android:text="View Status"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/lletCustomAmount"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
                 android:orientation="vertical">
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/bg_oval_dark"
-                    android:src="@drawable/ic_share_trc"
-                    android:id="@+id/btnShareTrc"
+
+                <ImageView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    app:rippleColor="@color/lightBlue"
-                    android:clickable="true"
-                    />
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/trust_wallet_qr" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Share"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/_12ssp"
+                    android:text="OR"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTrcId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/bg_et"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/Trcid"
+                    android:textAlignment="center"
                     android:textColor="@color/darkBlue"
-                    />
+                    android:textSize="@dimen/_14ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:background="@drawable/bg_oval_dark"
+android:id="@+id/btnCopyTrc"
+                            android:clickable="true"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_copy_trc"
+                            app:rippleColor="@color/lightBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Copy"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/btnShareTrc"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:background="@drawable/bg_oval_dark"
+                            android:clickable="true"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_share_trc"
+                            app:rippleColor="@color/lightBlue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Share"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivUploadProof"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:background="@drawable/bg_et"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_upload_proof" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lletCustomAmount">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUploadProof"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn"
+                        android:text="Upload Receipt"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReuqestRelease"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn"
+                        android:text="Request Release"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
             </LinearLayout>
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_margin="@dimen/_20sdp"
-            android:padding="@dimen/_10sdp"
-            android:background="@drawable/bg_et"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_150sdp"
-            android:src="@drawable/ic_upload_proof"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/ivUploadProof"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_15sdp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/rletCustomAmount">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnUploadProof"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_btn"
-            android:text="Upload Receipt"
-            android:textAllCaps="false"
-            android:textColor="@color/lightBlue"
-            android:textStyle="bold" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnReuqestRelease"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_btn"
-            android:text="Request Release"
-            android:textAllCaps="false"
-            android:textColor="@color/lightBlue"
-            android:textStyle="bold" />
-
-    </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

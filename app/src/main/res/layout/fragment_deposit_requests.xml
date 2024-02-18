@@ -23,7 +23,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/llDepositHeader"
+        android:id="@+id/rlDepositHeader"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
         android:background="@color/darkBlue"
@@ -71,22 +71,30 @@
     </RelativeLayout>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
         android:src="@drawable/arc_2"
-        app:layout_constraintTop_toBottomOf="@id/llDepositHeader" />
+        app:layout_constraintTop_toBottomOf="@id/rlDepositHeader" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/adminDRSR"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlDepositHeader"
+        >
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDepositList"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:padding="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/llDepositHeader"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/deposit_req_list_items" />
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

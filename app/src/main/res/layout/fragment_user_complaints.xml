@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dashboard.Admin.UserComplaints">
+
+        <TextView
+            android:id="@+id/txtadminUserrvPlaceholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/_20sdp"
+            android:text="No Users Enrolled!"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/lladminUsercomplains"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@color/darkBlue"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:text="User Complaints and Issues, Suggestions and more"
+                android:textColor="@color/lightBlue"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/bg_et_search_bar"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etcomplainSearchBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.9"
+                    android:maxLines="1"
+                    android:background="@null"
+                    android:hint="Search via ID"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/lightBlue"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="@dimen/_14ssp" />
+
+                <ImageView
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:elevation="@dimen/_7sdp"
+                    android:src="@drawable/ic_search" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/arc_2"
+            app:layout_constraintTop_toBottomOf="@id/lladminUsercomplains" />
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/adminUserComplainsSRL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lladminUsercomplains"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvuserComplains"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:listitem="@layout/complains_list_items" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

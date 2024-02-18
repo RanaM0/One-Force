@@ -170,13 +170,13 @@
                         android:layout_height="25dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/ic_bottom_profile" />
+                        app:srcCompat="@drawable/ic_bottom_helpcenter" />
 
                     <TextView
                         android:id="@+id/txtProfile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Profile"
+                        android:text="Help"
                         android:textAlignment="center"
                         android:textColor="@color/darkBlue" />
 

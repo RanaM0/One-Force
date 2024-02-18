@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.itdocx.oneapp" />
-                  <option name="mobileSdkAppId" value="1:114939656954:android:26e147eedbbbc7a403e743" />
-                  <option name="projectId" value="one-app-c6bf1" />
-                  <option name="projectNumber" value="114939656954" />
+                  <option name="appId" value="com.itdocx.oneforce" />
+                  <option name="mobileSdkAppId" value="1:840625887514:android:7d27f713229ad66df4f4a3" />
+                  <option name="projectId" value="one-force-fdeee" />
+                  <option name="projectNumber" value="840625887514" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

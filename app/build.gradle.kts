@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.itdocx.oneapp"
+    namespace = "com.itdocx.oneforce"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.itdocx.oneapp"
+        applicationId = "com.itdocx.oneforce"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

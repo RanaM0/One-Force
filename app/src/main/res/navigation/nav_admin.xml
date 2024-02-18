@@ -2,21 +2,52 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_admin"
     app:startDestination="@id/adminFrag">
 
     <fragment
         android:id="@+id/adminFrag"
-        android:name="com.itdocx.oneapp.Dashboard.Admin.AdminFrag"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.AdminFrag"
         android:label="fragment_admin"
         tools:layout="@layout/fragment_admin" >
         <action
             android:id="@+id/action_adminFrag_to_depositRequests"
             app:destination="@id/depositRequests" />
+        <action
+            android:id="@+id/action_adminFrag_to_withdrawReqFrag"
+            app:destination="@id/withdrawReqFrag" />
+        <action
+            android:id="@+id/action_adminFrag_to_participantsFrag"
+            app:destination="@id/participantsFrag" />
+        <action
+            android:id="@+id/action_adminFrag_to_userComplaints"
+            app:destination="@id/userComplaints" />
+        <action
+            android:id="@+id/action_adminFrag_to_updateAnnouncements"
+            app:destination="@id/updateAnnouncements" />
     </fragment>
     <fragment
         android:id="@+id/depositRequests"
-        android:name="com.itdocx.oneapp.Dashboard.Admin.DepositRequests"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.DepositRequests"
         android:label="fragment_deposit_requests"
         tools:layout="@layout/fragment_deposit_requests" />
+    <fragment
+        android:id="@+id/withdrawReqFrag"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.withdrawReqFrag"
+        android:label="WithdrawReqFrag"
+        tools:layout="@layout/fragment_withdraw_req" />
+    <fragment
+        android:id="@+id/participantsFrag"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.ParticipantsFrag"
+        android:label="fragment_participants"
+        tools:layout="@layout/fragment_participants" />
+    <fragment
+        android:id="@+id/userComplaints"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.UserComplaints"
+        android:label="fragment_user_complaints"
+        tools:layout="@layout/fragment_user_complaints" />
+    <fragment
+        android:id="@+id/updateAnnouncements"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.UpdateAnnouncements"
+        android:label="fragment_update_announcements"
+        tools:layout="@layout/fragment_update_announcements" />
 </navigation>

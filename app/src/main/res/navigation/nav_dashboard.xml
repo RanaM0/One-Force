@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userFrag"
-        android:name="com.itdocx.oneapp.Dashboard.User.UserFrag"
+        android:name="com.itdocx.oneforce.Dashboard.User.UserFrag"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action
@@ -19,12 +19,24 @@
     </fragment>
     <fragment
         android:id="@+id/userWalletFrag"
-        android:name="com.itdocx.oneapp.Dashboard.User.UserWalletFrag"
+        android:name="com.itdocx.oneforce.Dashboard.User.UserWalletFrag"
         android:label="fragment_user_wallet"
-        tools:layout="@layout/fragment_user_wallet" />
+        tools:layout="@layout/fragment_user_wallet" >
+        <action
+            android:id="@+id/action_userWalletFrag_to_userWithdraw"
+            app:destination="@id/userWithdraw" />
+        <action
+            android:id="@+id/action_userWalletFrag_to_userWithdraw2"
+            app:destination="@id/userWithdraw" />
+    </fragment>
     <fragment
         android:id="@+id/userProfileFrag"
-        android:name="com.itdocx.oneapp.Dashboard.User.UserProfileFrag"
+        android:name="com.itdocx.oneforce.Dashboard.User.UserProfileFrag"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/userWithdraw"
+        android:name="com.itdocx.oneforce.Dashboard.Admin.UserWithdraw"
+        android:label="fragment_user_withdraw_lists"
+        tools:layout="@layout/fragment_user_withdraw_lists" />
 </navigation>

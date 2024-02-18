@@ -1,22 +1,22 @@
 {
   "project_info": {
-    "project_number": "114939656954",
-    "firebase_url": "https://one-app-c6bf1-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "one-app-c6bf1",
-    "storage_bucket": "one-app-c6bf1.appspot.com"
+    "project_number": "840625887514",
+    "firebase_url": "https://one-force-fdeee-default-rtdb.firebaseio.com",
+    "project_id": "one-force-fdeee",
+    "storage_bucket": "one-force-fdeee.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:114939656954:android:26e147eedbbbc7a403e743",
+        "mobilesdk_app_id": "1:840625887514:android:7d27f713229ad66df4f4a3",
         "android_client_info": {
-          "package_name": "com.itdocx.oneapp"
+          "package_name": "com.itdocx.oneforce"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCgiTvurQj4N7CN2H3USvzM_mCSy-PO3bw"
+          "current_key": "AIzaSyAbYUpvk5pA1jnuJSWIQZ8lHJlzG8pBTfs"
         }
       ],
       "services": {

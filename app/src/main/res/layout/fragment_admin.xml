@@ -18,7 +18,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/ivAdminarc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -26,7 +25,6 @@
             android:src="@drawable/arc_3" />
 
         <ImageView
-            android:id="@+id/ivAdminDP"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"
             android:layout_alignParentBottom="true"
@@ -34,7 +32,6 @@
             android:src="@drawable/user_1" />
 
         <TextView
-            android:id="@+id/txtWlcomeAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -51,6 +48,7 @@
         android:id="@+id/txtAdminName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="1"
         android:singleLine="true"
         android:text="@string/app_name"
         android:textAlignment="center"
@@ -58,14 +56,13 @@
         android:textColor="@color/darkBlue"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
-        android:maxLines="1"
         app:layout_constraintTop_toBottomOf="@id/rlAdminHeader" />
 
     <TextView
-        android:maxLines="1"
         android:id="@+id/txtAdminEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="1"
         android:singleLine="true"
         android:text="@string/dummy_mail"
         android:textAlignment="center"
@@ -86,171 +83,245 @@
             android:layout_margin="@dimen/_20sdp"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/rlAdminParticipants"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:id="@+id/ivParticipants"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlAdminParticipants"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_participants" />
+                    android:padding="@dimen/_5sdp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/ivParticipants"
-                    android:text="Participants"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/ivParticipants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_participants" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/arrow" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivParticipants"
+                        android:text="Participants"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
 
-            <RelativeLayout
-                android:id="@+id/rlAdminDepositReq"
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:id="@+id/ivAdminChangePrize"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlAdminAnnouncements"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_prize" />
+                    android:padding="@dimen/_5sdp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/ivAdminChangePrize"
-                    android:text="Deposit Requests"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/ivAnouncements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_announcements" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/arrow" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivAnouncements"
+                        android:text="Anouncements"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
 
-            <RelativeLayout
-                android:id="@+id/rlAdminaddWinners"
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:id="@+id/ivAdminaddWinners"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlAdminDepositReq"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_winner" />
+                    android:padding="@dimen/_5sdp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/ivAdminaddWinners"
-                    android:text="Add winners"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/ivAdminChangePrize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_prize" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/arrow" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivAdminChangePrize"
+                        android:text="Deposit Requests"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
 
-            <RelativeLayout
-                android:id="@+id/rlAdmincheckWallet"
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:id="@+id/ivAdminCheckwallet"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlAdminWithdrawReq"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_admin_wallet" />
+                    android:padding="@dimen/_5sdp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/ivAdminCheckwallet"
-                    android:text="Check Wallet"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/ivAdminaddWinners"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_withdraw" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/arrow" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivAdminaddWinners"
+                        android:text="Withdraw Requests"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
 
-            <RelativeLayout
-                android:id="@+id/rlAdminLogout"
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_5sdp">
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
 
-                <ImageView
-                    android:id="@+id/ivAdminLogout"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/rlAdmincheckComplains"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_admin_logout" />
+                    android:padding="@dimen/_5sdp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/ivAdminCheckwallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_complains" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivAdminCheckwallet"
+                        android:text="User Complaints"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/rlAdminLogout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@id/ivAdminLogout"
-                    android:text="Logout"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
+                    android:padding="@dimen/_5sdp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/arrow" />
+                    <ImageView
+                        android:id="@+id/ivAdminLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_admin_logout" />
 
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivAdminLogout"
+                        android:text="Logout"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/arrow" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

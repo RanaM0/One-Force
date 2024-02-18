@@ -52,7 +52,6 @@
 
 
             <TextView
-                android:id="@+id/txtDashUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -79,7 +78,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/ivInvestmentsArc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
@@ -91,16 +89,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clInvestmentheader">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMyInvestments"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/clInvestmentheader"
+            android:layout_height="match_parent"
             tools:listitem="@layout/my_investments_listitems" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

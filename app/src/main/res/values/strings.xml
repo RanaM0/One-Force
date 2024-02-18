@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">One App</string>
+    <string name="app_name">One Force</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dummy_disc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
     <string name="dummy_mail">abcdefghijklm@email.com</string>
     <string name="admin_panel">Admin Panel</string>
     <string name="Trcid">TSP8sqrZh4YJzsdVfN8yXT41RakXGNDoxU</string>
     <string name="panel_detail">The invested panels will be refreshed daily at 12:00am. All Panels have lifetime cycle which means you have to end them on your own will otherwise panels will continue making profit day by day.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
